@@ -1,10 +1,9 @@
 import PropTypes from 'prop-types';
 
 const Notification = ({ message }) => (
-  <>
-    <h2>Statistics</h2>
+  <div>
     <p>{message}</p>
-  </>
+  </div>
 );
 
 Notification.propTypes = {

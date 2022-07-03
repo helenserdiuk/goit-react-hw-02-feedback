@@ -1,13 +1,12 @@
 import PropTypes from 'prop-types';
 import styles from './FeedbackOptions.module.css';
 
-const FeedbackOptions = ({ onLeaveFeedback }) => (
-  <>
-    <h2>Please leave feedback</h2>
+const FeedbackOptions = ({ onLeaveFeedback, options }) => (
+  <div>
     <button
       className={styles.btnStyle}
       type="button"
-      name="good"
+      name={options[0]}
       onClick={onLeaveFeedback}
     >
       Good
@@ -15,7 +14,7 @@ const FeedbackOptions = ({ onLeaveFeedback }) => (
     <button
       className={styles.btnStyle}
       type="button"
-      name="neutral"
+      name={options[1]}
       onClick={onLeaveFeedback}
     >
       Neutral
@@ -23,12 +22,12 @@ const FeedbackOptions = ({ onLeaveFeedback }) => (
     <button
       className={styles.btnStyle}
       type="button"
-      name="bad"
+      name={options[2]}
       onClick={onLeaveFeedback}
     >
       Bad
     </button>
-  </>
+  </div>
 );
 
 FeedbackOptions.propTypes = {
